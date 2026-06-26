@@ -1,0 +1,67 @@
+ <!-- ================= PAGE 2: ABOUT PAGE ================= -->
+        <section id="about-page" class="page-section max-w-7xl mx-auto px-6 md:px-12 w-full">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="text-xs text-brand-purple tracking-widest uppercase font-bold bg-brand-purple/10 px-4 py-1 rounded-full border border-brand-purple/20">Behind The Agency</span>
+                <h2 class="font-syne text-4xl md:text-5xl font-extrabold text-white">Meet Your Strategic Partners</h2>
+                <p class="text-gray-400 text-lg">Yukti & Tanvi have fused their creative energy to engineer digital solutions that break metrics, bypass conventional limits, and launch brands to outstanding peaks.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <!-- Profile 1: Yukti -->
+                <div class="glass-card card-3d p-8 rounded-3xl relative overflow-hidden border-t-4 border-brand-cyan">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-brand-cyan/10 rounded-full blur-3xl"></div>
+                    <div class="flex items-center gap-6 mb-6">
+                        <div class="w-20 h-20 rounded-2xl bg-gradient-to-br from-brand-cyan to-brand-dark flex items-center justify-center text-4xl font-syne font-bold text-white">Y</div>
+                        <div>
+                            <h3 class="font-syne text-2xl font-bold text-white">Yukti</h3>
+                            <p class="text-brand-cyan font-medium text-sm">Strategic Campaign Lead & Analytics</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed mb-6 font-light">
+                        Yukti focuses on data accuracy, PPC operations, and deep conversion funnels. She ensures every rupee of marketing capital is maximized to achieve concrete lead output and organic scaling.
+                    </p>
+                    <div class="flex gap-3">
+                        <span class="px-3 py-1 bg-white/5 rounded-full text-xs text-gray-400 border border-white/5">Meta Ads Certified</span>
+                        <span class="px-3 py-1 bg-white/5 rounded-full text-xs text-gray-400 border border-white/5">SEO Dominance Expert</span>
+                    </div>
+                </div>
+
+                <!-- Profile 2: Tanvi -->
+                <div class="glass-card card-3d p-8 rounded-3xl relative overflow-hidden border-t-4 border-brand-purple">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-brand-purple/10 rounded-full blur-3xl"></div>
+                    <div class="flex items-center gap-6 mb-6">
+                        <div class="w-20 h-20 rounded-2xl bg-gradient-to-br from-brand-purple to-brand-dark flex items-center justify-center text-4xl font-syne font-bold text-white">T</div>
+                        <div>
+                            <h3 class="font-syne text-2xl font-bold text-white">Tanvi</h3>
+                            <p class="text-brand-purple font-medium text-sm">Creative Director & Brand Architect</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed mb-6 font-light">
+                        Tanvi defines the psychological design aspect and messaging patterns that make social platforms resonate. With an immaculate eye for visual layouts, she builds premium aesthetics for brands.
+                    </p>
+                    <div class="flex gap-3">
+                        <span class="px-3 py-1 bg-white/5 rounded-full text-xs text-gray-400 border border-white/5">Visual Storyteller</span>
+                        <span class="px-3 py-1 bg-white/5 rounded-full text-xs text-gray-400 border border-white/5">Content Funnel Master</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Interactive Value Tiles Section -->
+            <div class="mt-20 grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="glass-card p-6 rounded-2xl border-white/5">
+                    <div class="text-brand-cyan text-3xl mb-4"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                    <h4 class="font-syne text-lg font-bold text-white mb-2">Innovation Driven</h4>
+                    <p class="text-sm text-gray-400">We utilize modern AI algorithms and 3D web techniques to place your business far ahead of competitors.</p>
+                </div>
+                <div class="glass-card p-6 rounded-2xl border-white/5">
+                    <div class="text-brand-purple text-3xl mb-4"><i class="fa-solid fa-chart-line"></i></div>
+                    <h4 class="font-syne text-lg font-bold text-white mb-2">Metrics that Count</h4>
+                    <p class="text-sm text-gray-400">Zero fluff. We monitor cold conversions, direct inquiries, and revenue retention rates for long-term growth.</p>
+                </div>
+                <div class="glass-card p-6 rounded-2xl border-white/5">
+                    <div class="text-brand-pink text-3xl mb-4"><i class="fa-solid fa-fingerprint"></i></div>
+                    <h4 class="font-syne text-lg font-bold text-white mb-2">Tailor-Made Solutions</h4>
+                    <p class="text-sm text-gray-400">No automated templates. Your marketing is custom-tailored, responsive, and personally analyzed by us.</p>
+                </div>
+            </div>
+        </section>
