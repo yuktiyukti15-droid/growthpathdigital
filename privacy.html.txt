@@ -1,0 +1,50 @@
+ 
+        <!-- ================= PAGE 4: PRIVACY POLICY ================= -->
+        <section id="privacy-page" class="page-section max-w-5xl mx-auto px-6 md:px-12 w-full">
+            <div class="glass-card p-8 md:p-12 rounded-3xl border-white/10 space-y-8">
+                <div class="border-b border-white/10 pb-6">
+                    <span class="text-xs text-brand-pink tracking-widest uppercase font-bold bg-brand-pink/10 px-4 py-1 rounded-full border border-brand-pink/20">Regulatory Documentation</span>
+                    <h2 class="font-syne text-4xl font-extrabold text-white mt-4">Privacy Policy</h2>
+                    <p class="text-sm text-gray-500 mt-2">Last Updated: June 2026 | Effective Immediately</p>
+                </div>
+
+                <div class="space-y-6 text-gray-300 font-light leading-relaxed">
+                    <p class="text-gray-400">
+                        At <span class="font-semibold text-white">Y&T Digital Agency</span>, operated by Yukti & Tanvi, your privacy is a cornerstone of our professional code of conduct. This policy outlines how we extract, compile, and safeguard transactional information when you interact with our website or hire our digital advertising systems.
+                    </p>
+
+                    <div class="space-y-3">
+                        <h3 class="font-syne text-xl font-bold text-white"><span class="text-brand-cyan">1.</span> Information We Collect</h3>
+                        <p>We only request data that helps us connect with your brand and deliver optimal marketing reports:</p>
+                        <ul class="list-disc pl-6 space-y-2 text-sm text-gray-400">
+                            <li><strong class="text-gray-300">Contact Metrics:</strong> Name, professional email, phone number, or company website supplied manually by you.</li>
+                            <li><strong class="text-gray-300">Technical Credentials:</strong> IP addresses, browser specifications, operating systems, and anonymous tracking via Three.js rendering logs.</li>
+                        </ul>
+                    </div>
+
+                    <div class="space-y-3">
+                        <h3 class="font-syne text-xl font-bold text-white"><span class="text-brand-cyan">2.</span> How We Process Your Data</h3>
+                        <p>Your metrics will only be analyzed for critical administrative operations:</p>
+                        <ul class="list-disc pl-6 space-y-2 text-sm text-gray-400">
+                            <li>To construct curated pricing quotes and digital performance audits.</li>
+                            <li>To keep you updated on lead generation workflows via automated alerts, phone calls, or WhatsApp chats.</li>
+                            <li>To improve our 3D interface rendering dynamics.</li>
+                        </ul>
+                    </div>
+
+                    <div class="space-y-3">
+                        <h3 class="font-syne text-xl font-bold text-white"><span class="text-brand-cyan">3.</span> Zero Third-Party Monetization</h3>
+                        <p>
+                            We enforce absolute confidentiality. Under no circumstances will Yukti & Tanvi lease, trade, or distribute your email records or brand analytics with any external data aggregators, affiliates, or programmatic brokers.
+                        </p>
+                    </div>
+
+                    <div class="space-y-3">
+                        <h3 class="font-syne text-xl font-bold text-white"><span class="text-brand-cyan">4.</span> Your Legal Rights</h3>
+                        <p>
+                            You have full jurisdiction over your personal information. At any point, you may request that we purge your email history, phone details, and digital communication metrics from our private databases. To initiate a complete purge, directly contact us at <a href="tel:8059766116" class="text-brand-cyan hover:underline font-semibold">+91 8059766116</a>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
