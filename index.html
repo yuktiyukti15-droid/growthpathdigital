@@ -260,3 +260,199 @@
 
             </div>
         </section>
+    </main>
+
+    <!-- Shared Floating Quick-Contact Button (WhatsApp Only) -->
+    <a href="https://wa.me/918059766116" target="_blank" class="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-emerald-500 hover:bg-emerald-400 shadow-lg shadow-emerald-500/20 flex items-center justify-center text-white text-2xl transition-all duration-300 hover:scale-110">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- Main Global Footer -->
+    <footer class="relative z-10 glass-card border-t border-white/5 py-8 px-6 text-center text-xs text-gray-500">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+            <p>&copy; 2026 Y&T Digital Agency. Built for Yukti & Tanvi. All rights reserved.</p>
+            <div class="flex gap-6">
+                <button onclick="navigateTo('privacy')" class="hover:text-brand-cyan transition-colors">Privacy Terms</button>
+                <button onclick="navigateTo('contact')" class="hover:text-brand-cyan transition-colors">Support Portal</button>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Script Operations -->
+    <script>
+        // 1. Core SPA Router Logic
+        function navigateTo(pageId) {
+            // Find all page elements
+            const pages = document.querySelectorAll('.page-section');
+            const targetPage = document.getElementById(`${pageId}-page`);
+
+            if (!targetPage) return;
+
+            // Remove active status from active sections
+            pages.forEach(page => {
+                page.classList.remove('active');
+            });
+
+            // Make target page active
+            targetPage.classList.add('active');
+
+            // Handle Nav active visual indicator state
+            const navButtons = document.querySelectorAll('.nav-btn');
+            navButtons.forEach(btn => {
+                if (btn.getAttribute('data-page') === pageId) {
+                    btn.classList.add('text-brand-cyan', 'font-semibold');
+                    btn.classList.remove('text-gray-300');
+                } else {
+                    btn.classList.remove('text-brand-cyan', 'font-semibold');
+                    btn.classList.add('text-gray-300');
+                }
+            });
+
+            // Smooth scroll page back to absolute top on load
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // 2. Mobile Responsive Menu Panel Controls
+        const mobileToggle = document.getElementById('mobile-toggle');
+        const mobileNav = document.getElementById('mobile-nav');
+
+        mobileToggle.addEventListener('click', toggleMobileMenu);
+
+        function toggleMobileMenu() {
+            mobileNav.classList.toggle('hidden');
+            const icon = mobileToggle.querySelector('i');
+            if (mobileNav.classList.contains('hidden')) {
+                icon.className = 'fa-solid fa-bars';
+            } else {
+                icon.className = 'fa-solid fa-xmark';
+            }
+        }
+
+        // 3. Contact Form Submission Logic
+        function handleContactSubmit(event) {
+            event.preventDefault();
+            const alertBox = document.getElementById('form-success-alert');
+            alertBox.classList.remove('hidden');
+            
+            // Clear inputs inside the target form safely
+            event.target.reset();
+
+            // Auto fade alert after 5 seconds
+            setTimeout(() => {
+                alertBox.classList.add('hidden');
+            }, 6000);
+        }
+
+        // ==========================================
+        // 4. THREE.JS 3D PARTICLE BACKGROUND GRAPHICS
+        // ==========================================
+        let scene, camera, renderer, particles;
+        const count = 380; // Stable density to run on high-res monitors
+
+        function init3D() {
+            const canvasElement = document.getElementById('bg-canvas');
+            scene = new THREE.Scene();
+
+            // Setup camera perspective views
+            camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 100);
+            camera.position.z = 5;
+
+            // Instantiating WebGL Canvas Renderer
+            renderer = new THREE.WebGLRenderer({
+                canvas: canvasElement,
+                alpha: true, // Alpha transparent allows css gradient background to bleed through
+                antialias: true
+            });
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+            // Generate geometry array positions
+            const geometry = new THREE.BufferGeometry();
+            const positions = new Float32Array(count * 3);
+            const colors = new Float32Array(count * 3);
+
+            // Construct particle cloud points coordinates with organic random offsets
+            for(let i = 0; i < count * 3; i += 3) {
+                // X Axis
+                positions[i] = (Math.random() - 0.5) * 12;
+                // Y Axis
+                positions[i + 1] = (Math.random() - 0.5) * 12;
+                // Z Axis
+                positions[i + 2] = (Math.random() - 0.5) * 8;
+
+                // Alternate colors between cyan, purple, and gray
+                const randomVal = Math.random();
+                if (randomVal < 0.4) {
+                    colors[i] = 0.02; // R: Cyan (0.02, 0.71, 0.83)
+                    colors[i + 1] = 0.71;
+                    colors[i + 2] = 0.83;
+                } else if (randomVal < 0.8) {
+                    colors[i] = 0.42; // R: Purple (0.42, 0.15, 0.85)
+                    colors[i + 1] = 0.15;
+                    colors[i + 2] = 0.85;
+                } else {
+                    colors[i] = 0.25; // Default white/gray space
+                    colors[i + 1] = 0.25;
+                    colors[i + 2] = 0.35;
+                }
+            }
+
+            geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+            geometry.setAttribute('color', new THREE.BufferAttribute(colors, 3));
+
+            // Premium round-shaped particle styling using native WebGL shader specs
+            const material = new THREE.PointsMaterial({
+                size: 0.11,
+                vertexColors: true,
+                transparent: true,
+                opacity: 0.8,
+                blending: THREE.AdditiveBlending
+            });
+
+            particles = new THREE.Points(geometry, material);
+            scene.add(particles);
+
+            // Trigger Animation Loops
+            animate3D();
+        }
+
+        // Global mouse variables to trigger hover camera drift mechanics
+        let mouseX = 0;
+        let mouseY = 0;
+
+        window.addEventListener('mousemove', (e) => {
+            mouseX = (e.clientX / window.innerWidth - 0.5) * 1.5;
+            mouseY = (e.clientY / window.innerHeight - 0.5) * -1.5;
+        });
+
+        // 3D Rendering Frame loops
+        function animate3D() {
+            requestAnimationFrame(animate3D);
+
+            // Constant passive orbital rotation speed
+            particles.rotation.y += 0.0012;
+            particles.rotation.x += 0.0006;
+
+            // Camera drift formula with mouse drag dampening parameters
+            camera.position.x += (mouseX - camera.position.x) * 0.04;
+            camera.position.y += (mouseY - camera.position.y) * 0.04;
+            camera.lookAt(scene.position);
+
+            renderer.render(scene, camera);
+        }
+
+        // Responsive viewport resize adjustments for ThreeJS canvas
+        window.addEventListener('resize', () => {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        });
+
+        // Trigger ThreeJS execution on page setup load
+        window.addEventListener('DOMContentLoaded', () => {
+            init3D();
+            navigateTo('home'); // Set Default Page view to Home
+        });
+    </script>
+</body>
+</html>
